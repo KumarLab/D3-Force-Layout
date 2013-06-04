@@ -40,12 +40,12 @@ var dataset = {
 };
 // Initialize a default force layout, using the nodes and edges in dataset.
 var force = d3.layout.force()
-					 .nodes(dataset.nodes)
-					 .links(dataset.edges)
-					 .size([w, h])
-					 .linkDistance([80])
-					 .charge([-100])
-					 .start();
+		     .nodes(dataset.nodes)
+		     .links(dataset.edges)
+		     .size([w, h])
+		     .linkDistance([80])
+		     .charge([-100])
+		     .start();
 var colors = d3.scale.category10();
 // Create SVG element
 var svg = d3.select("body")

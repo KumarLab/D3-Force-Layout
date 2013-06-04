@@ -56,19 +56,19 @@ var svg = d3.select("body")
 var edges = svg.selectAll("line")
 	       .data(dataset.edges)
 	       .enter()
-			   .append("line")
-			   .style("stroke","#0CC")
-			   .style("stroke-width",1);
+               .append("line")
+               .style("stroke","#0CC")
+               .style("stroke-width",1);
 // Create nodes as circles.
 var nodes = svg.selectAll("circle")
-			   .data(dataset.nodes)
-			   .enter()
-			   .append("circle")
-			   .attr("r",10)
-			   .style("fill",function(d,i){
-				   return colors(i);
-			   })
-			   .call(force.drag);
+               .data(dataset.nodes)
+               .enter()
+               .append("circle")
+               .attr("r",10)
+               .style("fill",function(d,i){
+               		return colors(i);
+		  })
+               .call(force.drag);
 // Every time the simulation "ticks", this will be called.
 force.on("tick",function(){
 	edges.attr("x1", function(d){return d.source.x;})

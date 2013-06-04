@@ -49,13 +49,13 @@ var force = d3.layout.force()
 var colors = d3.scale.category10();
 // Create SVG element
 var svg = d3.select("body")
-			.append("svg")
-			.attr("width", w)
-			.attr("height", h);
+	    .append("svg")
+	    .attr("width", w)
+	    .attr("height", h);
 // Create edges as lines.
 var edges = svg.selectAll("line")
-			   .data(dataset.edges)
-			   .enter()
+	       .data(dataset.edges)
+	       .enter()
 			   .append("line")
 			   .style("stroke","#0CC")
 			   .style("stroke-width",1);

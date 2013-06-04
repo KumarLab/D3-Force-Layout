@@ -1,8 +1,8 @@
-d3 = function() {
+d3 = function(){
   var d3 = {
     version: "3.1.10"
   };
-  if (!Date.now) Date.now = function() {
+  if (!Date.now) Date.now = function(){
     return +new Date();
   };
   var d3_document = document, d3_window = window;
@@ -14,13 +14,13 @@ d3 = function() {
       d3_style_setProperty.call(this, name, value + "", priority);
     };
   }
-  d3.ascending = function(a, b) {
+  d3.ascending = function(a, b){
     return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
   };
-  d3.descending = function(a, b) {
+  d3.descending = function(a, b){
     return b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
   };
-  d3.min = function(array, f) {
+  d3.min = function(array, f){
     var i = -1, n = array.length, a, b;
     if (arguments.length === 1) {
       while (++i < n && ((a = array[i]) == null || a != a)) a = undefined;
